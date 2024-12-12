@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <body>
+        <h1> Estamos na página de resultados </h1>
+        <br>
+        Você escolheu: <span th:text="${aEscolha}"/>
+        <br>
+        O resultado de sua escolha foi: <span th:text="${saida}"/>
+        <br>
+        <h2>Score Atual</h2>
+        <p>Vitórias: <span th:text="${score.vitorias}"></span></p>
+        <p>Derrotas: <span th:text="${score.derrotas}"></span></p>
+        <p>Empates: <span th:text="${score.empates}"></span></p>
+        <br>
+        <form action="/reset" method="get">
+            <button type="submit">Resetar Score</button>
+        </form>
+    </body>
+</html>
